@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.scss";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
-      <h2>A Simple React Template by Harshit Behl</h2>
+      <Navbar />
     </div>
   );
 }
