@@ -9,7 +9,7 @@ function SidebarMenu({ title, listSpec }) {
       <ul className="sidebarMenu__list">
         {listSpec.map((listItem) => (
           <li className="sidebarMenu__listItem" key={listItem.text}>
-            {listItem.icon} {listItem.text}
+            {listItem.icon} <span>{listItem.text}</span>
           </li>
         ))}
       </ul>

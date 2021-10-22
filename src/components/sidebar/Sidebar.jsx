@@ -1,5 +1,18 @@
 import React from "react";
-import { Equalizer, Home, PeopleAlt, TrendingUp } from "@material-ui/icons";
+import {
+  Assessment,
+  AttachMoney,
+  ChatBubbleOutline,
+  DynamicFeed,
+  Equalizer,
+  Home,
+  MailOutline,
+  PeopleAlt,
+  Report,
+  Storefront,
+  TrendingUp,
+  WorkOutline,
+} from "@material-ui/icons";
 
 import "./Sidebar.scss";
 import SidebarMenu from "./SidebarMenu";
@@ -15,28 +28,32 @@ function Sidebar() {
           { text: "Sales", icon: <TrendingUp /> },
         ]}
       />
+      <hr />
       <SidebarMenu
         title={"Quick Menu"}
         listSpec={[
-          { text: "Home", icon: <Home /> },
-          { text: "Analytics", icon: <Equalizer /> },
-          { text: "Sales", icon: <TrendingUp /> },
+          { text: "Users", icon: <PeopleAlt /> },
+          { text: "Products", icon: <Storefront /> },
+          { text: "Transactions", icon: <AttachMoney /> },
+          { text: "Reports", icon: <Assessment /> },
         ]}
       />
+      <hr />
       <SidebarMenu
         title={"Notifications"}
         listSpec={[
-          { text: "Home", icon: <Home /> },
-          { text: "Analytics", icon: <Equalizer /> },
-          { text: "Sales", icon: <TrendingUp /> },
+          { text: "Mail", icon: <MailOutline /> },
+          { text: "Feedback", icon: <DynamicFeed /> },
+          { text: "Messages", icon: <ChatBubbleOutline /> },
         ]}
       />
+      <hr />
       <SidebarMenu
         title={"Staff"}
         listSpec={[
-          { text: "Home", icon: <Home /> },
+          { text: "Manage", icon: <WorkOutline /> },
           { text: "Analytics", icon: <Equalizer /> },
-          { text: "Sales", icon: <TrendingUp /> },
+          { text: "Reports", icon: <Report /> },
         ]}
       />
     </div>
