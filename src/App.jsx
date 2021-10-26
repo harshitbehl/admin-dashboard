@@ -1,8 +1,11 @@
 import React from "react";
-import "./App.scss";
+import { Route, Switch } from "react-router";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./pages/home/Home";
+import Users from "./pages/users/Users";
+
+import "./App.scss";
 
 function App() {
   return (
@@ -10,7 +13,14 @@ function App() {
       <Navbar />
       <div className="app__container">
         <Sidebar />
-        <Home />
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+        </Switch>
       </div>
     </div>
   );
