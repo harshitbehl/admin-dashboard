@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./pages/home/Home";
 import Users from "./pages/users/Users";
+import User from "./pages/user/User";
 
 import "./App.scss";
 
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path="/users">
             <Users />
+          </Route>
+          <Route path="/user/:userId">
+            <User />
           </Route>
         </Switch>
       </div>
