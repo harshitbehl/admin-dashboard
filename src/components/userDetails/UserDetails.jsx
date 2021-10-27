@@ -43,7 +43,7 @@ function UserDetails() {
           <MailOutline className="userDetails__icon" /> harshit.behl@gmail.com
         </p>
         <p className="userDetails__contactLocation">
-          <LocationOnOutlined className="userDetails__icon" /> Toronto | Canada
+          <LocationOnOutlined className="userDetails__icon" /> Toronto, Canada
         </p>
       </div>
     </div>
