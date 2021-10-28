@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Avatar } from "@material-ui/core";
 import { DeleteOutline } from "@material-ui/icons";
-import { rows } from "../../datagridData/usersDummyData";
+import { rows } from "../../datagridData/productsDummyData";
 import { Link } from "react-router-dom";
 
-import "./Users.scss";
+import "./Products.scss";
 
-function Users() {
+function Products() {
   const [data, setData] = useState(rows);
 
   const deleteHandler = (id) => {
@@ -21,22 +21,24 @@ function Users() {
       width: 80,
     },
     {
-      field: "user",
-      headerName: "User",
-      width: 200,
+      field: "product",
+      headerName: "Product",
+      width: 340,
       renderCell: (params) => {
         return (
-          <div className="users__user-cell">
-            <Avatar src={params.row.avatar} />
-            <span>{params.row.username}</span>
+          <div className="products__product-cell">
+            <div className="products__image-container">
+              <img className="products__image" src={params.row.image} alt="" />
+            </div>
+            <span>{params.row.name}</span>
           </div>
         );
       },
     },
     {
-      field: "email",
-      headerName: "Email",
-      width: 250,
+      field: "stock",
+      headerName: "Stock",
+      width: 120,
     },
     {
       field: "status",
@@ -44,8 +46,8 @@ function Users() {
       width: 120,
     },
     {
-      field: "transaction",
-      headerName: "Transaction",
+      field: "price",
+      headerName: "Price",
       width: 160,
     },
     {
@@ -54,12 +56,12 @@ function Users() {
       width: 150,
       renderCell: (params) => {
         return (
-          <div className="users__action-cell">
-            <Link to={`/user/${params.row.id}`}>
+          <div className="products__action-cell">
+            <Link to={`/product/${params.row.id}`}>
               <button>Edit</button>
             </Link>
             <DeleteOutline
-              className="users__action-cell-delete"
+              className="products__action-cell-delete"
               onClick={() => deleteHandler(params.row.id)}
             />
           </div>
@@ -69,7 +71,7 @@ function Users() {
   ];
 
   return (
-    <div className="users">
+    <div className="products">
       <DataGrid
         rows={data}
         columns={columns}
@@ -77,10 +79,10 @@ function Users() {
         rowsPerPageOptions={[5]}
         checkboxSelection
         disableSelectionOnClick
-        className="users__dataGrid"
+        className="products__dataGrid"
       />
     </div>
   );
 }
 
-export default Users;
+export default Products;

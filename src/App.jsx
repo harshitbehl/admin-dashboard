@@ -6,6 +6,7 @@ import Home from "./pages/home/Home";
 import Users from "./pages/users/Users";
 import User from "./pages/user/User";
 import NewUser from "./pages/newUser/NewUser";
+import Products from "./pages/products/Products";
 
 import "./App.scss";
 
@@ -28,6 +29,11 @@ function App() {
           <Route path="/newUser">
             <NewUser />
           </Route>
+          <Route path="/products">
+            <Products />
+          </Route>
+          <Route path="/product/:productId">{/* <Product /> */}</Route>
+          <Route path="/newProduct">{/* <NewProduct /> */}</Route>
         </Switch>
       </div>
     </div>
