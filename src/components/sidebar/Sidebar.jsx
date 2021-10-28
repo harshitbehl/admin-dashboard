@@ -23,7 +23,7 @@ function Sidebar() {
       <SidebarMenu
         title={"Dashboard"}
         listSpec={[
-          { text: "Home", icon: <Home /> },
+          { text: "Home", icon: <Home />, link: "/" },
           { text: "Analytics", icon: <Equalizer /> },
           { text: "Sales", icon: <TrendingUp /> },
         ]}
@@ -32,8 +32,8 @@ function Sidebar() {
       <SidebarMenu
         title={"Quick Menu"}
         listSpec={[
-          { text: "Users", icon: <PeopleAlt /> },
-          { text: "Products", icon: <Storefront /> },
+          { text: "Users", icon: <PeopleAlt />, link: "/users" },
+          { text: "Products", icon: <Storefront />, link: "/products" },
           { text: "Transactions", icon: <AttachMoney /> },
           { text: "Reports", icon: <Assessment /> },
         ]}

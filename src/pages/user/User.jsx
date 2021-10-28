@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import UserDetails from "../../components/userDetails/UserDetails";
 import UserUpdate from "../../components/userUpdate/UserUpdate";
 
@@ -9,7 +10,9 @@ function User() {
     <div className="user">
       <div className="user__header">
         <h2 className="user__title">Edit User</h2>
-        <button className="user__create-button">Create</button>
+        <Link to="/newUser">
+          <button className="user__create-button">Create</button>
+        </Link>
       </div>
       <div className="user__body">
         <UserDetails />
