@@ -1,0 +1,11 @@
+@import "variables";
+
+.newProduct {
+  flex: 5;
+  padding: 5rem;
+
+  &__title {
+    color: $primary-text-color;
+    font-size: 3rem;
+  }
+}

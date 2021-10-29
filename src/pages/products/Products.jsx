@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import { Avatar } from "@material-ui/core";
 import { DeleteOutline } from "@material-ui/icons";
 import { rows } from "../../datagridData/productsDummyData";
 import { Link } from "react-router-dom";
