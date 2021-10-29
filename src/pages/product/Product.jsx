@@ -10,7 +10,7 @@ function Product() {
   return (
     <div className="product">
       <div className="product__header">
-        <h2 className="product__title">Edit User</h2>
+        <h2 className="product__title">Product</h2>
         <Link to="/newProduct">
           <button className="product__create-button">Create</button>
         </Link>

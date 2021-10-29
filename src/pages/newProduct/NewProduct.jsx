@@ -13,6 +13,16 @@ function NewProduct() {
         <form className="newProduct__form">
           <label>Image</label>
           <input type="file" id="newProductImage" />
+          <label>Name</label>
+          <input type="text" placeholder="Apple iPhone 12 Pro Max" />
+          <label>Stock</label>
+          <input type="text" placeholder="20" />
+          <label>Active</label>
+          <select name="active" id="active">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <button>Create</button>
         </form>
       </div>
     </div>
